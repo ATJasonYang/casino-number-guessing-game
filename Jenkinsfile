@@ -1,5 +1,11 @@
 pipeline {
     agent any
+
+        // 👇 添加这两行，让 Jenkins 每隔 1 分钟检查一次 GitHub
+    triggers {
+        pollSCM '* * * * *'
+    }
+    
     stages {
         stage('Build') {
             steps {
