@@ -18,6 +18,7 @@ pipeline {
             steps {
                 bat '.\\build\\Debug\\casino_game.exe'              // 运行主程序
                 bat '.\\build\\Debug\\test_game.exe'                // 运行测试程序
+                echo 'Auto triggered successfully!'
             }
         }
         stage('Deliver') {
