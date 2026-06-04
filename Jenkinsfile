@@ -10,8 +10,8 @@ pipeline {
         }
         stage('Test') {
             steps {
-                bat '.\\build\\casino_game.exe'              // 运行主程序
-                bat '.\\build\\test_game.exe'                // 运行测试程序
+                bat '.\\build\\Debug\\casino_game.exe'              // 运行主程序
+                bat '.\\build\\Debug\\test_game.exe'                // 运行测试程序
             }
         }
         stage('Deliver') {
