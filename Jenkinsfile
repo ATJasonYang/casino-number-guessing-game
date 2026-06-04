@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                bat 'tar -czf casino_game.tar.gz build\\casino_game.exe'  // 打包 exe 文件
+                bat 'tar -czf casino_game.tar.gz build\\Debug\\casino_game.exe'  // 打包 exe 文件
                 archiveArtifacts artifacts: 'casino_game.tar.gz', fingerprint: true
             }
         }
